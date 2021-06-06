@@ -14,6 +14,8 @@ import UserInfo from './components/conditional/UserInfo';
 import DirectFather from './components/comunication/DirectFather';
 import IndirectFather from './components/comunication/IndirectFather';
 import Input from './components/form/Input';
+import Counter from './components/Counter/Counter';
+import Mega from './components/mega/Mega';
 
 export default function App(props) {
   return (
@@ -22,6 +24,12 @@ export default function App(props) {
 
       <div className="Cards">
 
+        <Card titulo="#13 Mega sena" color="#b9006e">
+          <Mega />
+        </Card>
+        <Card titulo="#12 Counter" color="#424242">
+          <Counter initialNumber={10}/>
+        </Card>
         <Card titulo="#11 Controlled component" color="#e45f56">
           <Input />
         </Card>
