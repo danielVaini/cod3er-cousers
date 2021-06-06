@@ -1,19 +1,13 @@
 import ReactDOM from 'react-dom';
+import App from './App';
 
 import './index.css'
 
-import First from './components/basics/First'
-import WithProperty from './components/basics/WithProperty';
 
 const tag = <strong>Olá Dan</strong>
 
 ReactDOM.render(
-  <div>
-    <WithProperty 
-      titulo="Student situation" 
-      aluno="Dan"
-      nota={10} />
-    <First />
-  </div>,
+  <App />
+  ,
   document.getElementById('root')
 )
