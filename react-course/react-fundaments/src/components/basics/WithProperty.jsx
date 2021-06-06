@@ -1,5 +1,8 @@
 export default function WithProperty(props){
   const status = props.nota >= 7 ? 'Pass' : 'reproved';
+
+  const notaInt = Math.ceil(props.nota)
+
   return (
     <div>
       <h2>{props.titulo}</h2>
