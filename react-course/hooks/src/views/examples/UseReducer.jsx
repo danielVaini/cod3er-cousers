@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 import PageTitle from "../../components/layout/PageTitle";
 
 const initialState = {
@@ -22,6 +22,8 @@ function reducer(state, action) {
       return {...state, number: state.number / 25}
     case "transformeInt":
       return {...state, number: parseInt(state.number)}
+    case "addAnyNumber":
+      return {...state, number: state.number + action.payload}
     default:
       return state;
   }
@@ -29,6 +31,7 @@ function reducer(state, action) {
 
 const UseReducer = (props) => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [number, setNumber] = useState(0);
   return (
     <div className="UseReducer">
       <PageTitle
@@ -58,6 +61,12 @@ const UseReducer = (props) => {
           <button className="btn" onClick={() => dispatch({ type: "transformeInt" })}>
              Transforme in integer
           </button>
+          <button className="btn" onClick={() => dispatch({ type: "addAnyNumber", payload: parseInt(number) })}>
+             + {number}
+          </button>
+        </div>
+        <div>
+          <input type="number" className="input" value={number} onChange={(e) => setNumber(e.target.value)}/>
         </div>
       </div>
     </div>
