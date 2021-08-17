@@ -6,7 +6,17 @@ import './App.css'
 function App() {
   return (
     <div className="App">
-      <Card></Card>
+      <h1>Exercicie React-redux (Simple)</h1>
+      <div className="line"> 
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+      </div>
+      <div className="line"> 
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+      </div>
     </div>
   );
 }
