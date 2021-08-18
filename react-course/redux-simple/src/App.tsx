@@ -1,21 +1,25 @@
 import React from 'react';
-import Card from './components/Card';
 
 import './App.css'
+import Interval from './components/Interval';
+import Media from './components/Media';
+import Raffle from './components/Raffle';
+import Sum from './components/Sum';
+
 
 function App() {
   return (
     <div className="App">
       <h1>Exercicie React-redux (Simple)</h1>
-      <div className="line"> 
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
+      <div className="line">
+        <Interval />
+
       </div>
-      <div className="line"> 
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
+      <div className="line">
+        <Media />
+        <Sum />
+        <Raffle />
+        
       </div>
     </div>
   );
