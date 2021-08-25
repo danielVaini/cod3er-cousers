@@ -8,6 +8,7 @@ import Sum from './components/Sum';
 
 
 function App() {
+
   return (
     <div className="App">
       <h1>Exercicie React-redux (Simple)</h1>
